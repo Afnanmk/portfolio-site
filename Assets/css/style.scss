@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+// *********** VARIABLES ************
+:root {
+  --bg-color: #181433;
+  --cta-color: linear-gradient(to right, #dd5e89 0%, #f7bb97 51%, #dd5e89 100%);
+}
+$heroStrongText: #dd5e89,
+  -webkit-linear-gradient(to right, #dd5e89 0%, #f7bb97 51%, #dd5e89 100%),
+  -moz-linear-gradient(to right, #dd5e89 0%, #f7bb97 51%, #dd5e89 100%),
+  linear-gradient(to right, #dd5e89 0%, #f7bb97 51%, #dd5e89 100%);
+
+$petrona-font-subtitle: "Petrona", serif;
+$roboto-font: "Roboto", sans-serif;
+$space-grotesk-regular-font: "Space Grotesk", sans-serif;
+$montserrat-hero-title: "Montserrat", sans-serif;
+
+// ********** MIXINS **********
+@mixin fontRegular {
+  font-family: $space-grotesk-regular-font;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  // color: #d1d1d1;
+  // color: #a7aab7;
+  color: #cacaca;
+}
+@mixin fontSubtitle {
+  font-family: $petrona-font-subtitle;
+  font-size: 4rem;
+}
+@mixin subtitleBar {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #dd5e89 0%, #f7bb97 100%);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+@mixin button {
+  // background-image: linear-gradient(to right, #f692c6 0%, #f7bb97 100%);
+  background-color: #dd5e89;
+  border: none;
+  padding: 1.3rem 2rem;
+  text-transform: uppercase;
+  transition: 0.4s;
+  color: white;
+  border-radius: 5px;
+  // display: block;
+  font-weight: 600;
+  font-family: $space-grotesk-regular-font;
+  letter-spacing: 0.2rem;
+}
+@mixin sectionPadding {
+  padding-top: 12rem;
+}
+@mixin flex {
+  display: flex;
+}
+// ************** STYLING **************
+*,
+*::after,
+*::before,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+body {
+  background-color: var(--bg-color);
+  color: white;
+}
+.container {
+  width: 85%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+// ******************** HEADER SECTION STARTS ********************
+.header {
+  // border: 1px solid yellow;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  .logo {
+    font-size: 2.5rem;
+    font-family: $petrona-font-subtitle;
+  }
+  .nav-list {
+    flex: 1;
+    text-align: right;
+
+    .nav__item {
+      display: inline-block;
+      position: relative;
+      padding: 0 12px;
+      margin-left: 12px;
+    }
+    .nav__item:not(:last-child)::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: #dd5e89;
+      display: block;
+      margin: auto;
+      margin-top: 0.9rem;
+      transition: 0.4s;
+    }
+    .nav__item:not(:last-child):hover::after {
+      width: 100%;
+      cursor: pointer;
+    }
+    .nav__link {
+      @include fontRegular();
+    }
+
+    .nav__link--contact {
+      background-color: #f7bb97;
+      background-color: #dd5e89;
+      padding: 1rem 1.7rem 1.2rem 1.7rem;
+      border-radius: 5px;
+      transition: 0.3s ease;
+      font-weight: 500;
+    }
+    .nav__link--contact:hover {
+      background-color: #f692c6;
+      cursor: pointer;
+      color: #181433;
+    }
+  }
+}
+//  **************** HEADER SECTION ENDS ***************
+
+// ***************** HERO SECTION STARTS ***************
+.hero {
+  // padding-top: 10rem;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 7rem;
+  .wrapper {
+    padding-top: 2.5rem;
+    width: 70%;
+  }
+  .hero__title {
+    font-size: 9rem;
+    font-family: $montserrat-hero-title;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(312deg, #f692c6, #ffcdb1);
+    -webkit-background-clip: text;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  .hero__subtitle {
+    font-family: $petrona-font-subtitle;
+    font-size: 4.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .hero__description {
+    @include fontRegular();
+    font-size: 2rem;
+    color: #c9c0c0;
+  }
+  .social-icons {
+    padding-top: 3.8rem;
+  }
+  .social-icons a:not(:first-child) {
+    margin-left: 2.5rem;
+  }
+
+  .social-icons img {
+    width: 33px;
+    transition: 0.5s;
+  }
+
+  .social-icons a:hover img {
+    transform: translateY(-5px);
+  }
+  @import "scrolldownSvg";
+}
+// ***************** HERO SECTION ENDS ****************
+
+// ***************** ABOUT SECTION STARTS *******************
+.about {
+  @include sectionPadding();
+  .row {
+    @include flex();
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .about__title {
+    @include fontSubtitle();
+  }
+  .about__title::before {
+    @include subtitleBar();
+  }
+  .about__left {
+    padding-top: 5rem;
+    width: 45%;
+    p {
+      @include fontRegular();
+    }
+    .resume-btn {
+      margin-top: 4.5rem;
+    }
+    .btn {
+      @include button;
+    }
+    .btn:hover {
+      background-color: #f692c6;
+      cursor: pointer;
+      color: #181433;
+    }
+  }
+  .about__right {
+    width: 50%;
+  }
+}
+// ***************** ABOUT SECTION ENDS *******************
+
+// ***************** PORTFOLIO SECTION STARTS *******************
+.portfolio {
+  @include sectionPadding();
+  .portfolio__title {
+    @include fontSubtitle();
+
+    &::after {
+      @include subtitleBar();
+    }
+  }
+
+  .project__wrapper {
+    @include flex();
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5rem;
+  }
+  .project__wrapper + .project__wrapper {
+    padding-top: 6rem;
+  }
+  .project__image {
+    width: 50%;
+    img {
+      border-radius: 3px;
+    }
+  }
+  .project__description {
+    width: 45%;
+
+    .app-title {
+      font-family: $petrona-font-subtitle;
+      font-size: 2.5rem;
+    }
+    .tech-stack {
+      font-size: 2rem;
+    }
+    .app-description {
+      @include fontRegular();
+      margin-bottom: 4rem;
+    }
+    .app-description--container {
+      background: #211c41;
+      padding: 1.5rem 1.8rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+  }
+  .app-icons {
+    display: flex;
+    align-items: center;
+
+    a:not(:first-child) {
+      margin-left: 1.5rem;
+    }
+    a {
+      transition: 0.4s;
+    }
+    a:hover {
+      transform: translateY(-5px);
+    }
+  }
+  .portfolio__btn {
+    @include button();
+  }
+}
+
+// ***************** PORTFOLIO SECTION ENDS *******************
+
+// ***************** SKILLS SECTION STARTS *******************
+.skills {
+  @include sectionPadding();
+  .skills__title {
+    @include fontSubtitle();
+  }
+  .skills__title::before {
+    @include subtitleBar();
+  }
+
+  .skills__wrapper {
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    // grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 40px;
+  }
+  .skill {
+    text-align: center;
+    img {
+      width: 100px;
+      transition: 0.4s;
+    }
+    img:hover {
+      transform: translateY(-7px);
+    }
+    p {
+      @include fontRegular();
+    }
+  }
+  .skills__more {
+    font-family: $petrona-font-subtitle;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+// ***************** SKILLS SECTION ENDS *******************
+
+// ***************** FOOTER SECTION STARTS *******************
+.footer {
+  @include sectionPadding();
+  padding-bottom: 3rem;
+  .footer__title {
+    @include fontSubtitle();
+  }
+  .footer__title::after {
+    @include subtitleBar();
+  }
+  .footer__details {
+    text-align: center;
+    padding: 5rem 0;
+  }
+  .footer__details--left {
+    margin-bottom: 4rem;
+    p {
+      font-family: $space-grotesk-regular-font;
+      font-size: 3rem;
+      font-weight: 500;
+    }
+  }
+  .footer__details--right {
+    img {
+      width: 30px;
+    }
+    p {
+      font-family: $space-grotesk-regular-font;
+      font-size: 2rem;
+      font-weight: 500;
+      color: #f692c6;
+      margin-bottom: 1.3rem;
+    }
+    .stalk-me {
+      margin-top: 3.5rem;
+    }
+    .footer__btn {
+      @include button();
+
+      &:hover {
+        background-color: #f692c6;
+        cursor: pointer;
+        color: #181433;
+      }
+    }
+    .footer-icons {
+      a + a {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+  .copyright {
+    @include fontRegular();
+    text-align: center;
+
+    span {
+      -webkit-text-fill-color: transparent;
+      background: -webkit-linear-gradient(312deg, #f692c6, #ffcdb1);
+      -webkit-background-clip: text;
+      font-style: normal;
+      font-weight: 600;
+    }
+  }
+}
+// ***************** FOOTER SECTION ENDS *******************
