@@ -50,6 +50,10 @@ body {
   margin: 0 auto;
 }
 
+.header {
+  background-color: #181433;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,8 +127,16 @@ body {
   color: #181433;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
+.cancel-menu {
+  display: none;
+}
+
 .hero {
-  min-height: 100vh;
+  min-height: 35vh;
   width: 100%;
   padding-bottom: 7rem;
 }
@@ -135,7 +147,7 @@ body {
 }
 
 .hero .hero__title {
-  font-size: 9rem;
+  font-size: 8rem;
   font-family: "Montserrat", sans-serif;
   -webkit-text-fill-color: transparent;
   background: -webkit-linear-gradient(312deg, #f692c6, #ffcdb1);
@@ -146,9 +158,9 @@ body {
 
 .hero .hero__subtitle {
   font-family: "Petrona", serif;
-  font-size: 4.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  font-size: 4.3rem;
+  padding-top: 0rem;
+  padding-bottom: 2.5rem;
 }
 
 .hero .hero__description {
@@ -177,6 +189,10 @@ body {
 .hero .social-icons a:hover img {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+}
+
+.hero .arrows {
+  top: 440px;
 }
 
 .hero .arrows {
@@ -555,7 +571,17 @@ body {
 }
 
 .footer .footer__details--right .footer-icons a + a {
-  margin-left: 1.5rem;
+  margin-left: 2rem;
+}
+
+.footer .footer__details--right .footer-icons a {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.footer .footer__details--right .footer-icons a:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .footer .copyright {
@@ -572,5 +598,140 @@ body {
   -webkit-background-clip: text;
   font-style: normal;
   font-weight: 600;
+}
+
+.sticky-navbar {
+  position: fixed;
+  background-color: #110a3f;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1002px) {
+  html {
+    font-size: 55%;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  .container {
+    width: 90%;
+  }
+  .hamburger-menu {
+    width: 25px;
+    display: block;
+    cursor: pointer;
+  }
+  .hero {
+    position: relative;
+  }
+  .hero .wrapper {
+    width: 100%;
+  }
+  .hero .hero__title {
+    font-size: 8rem;
+  }
+  .nav .logo {
+    font-size: 2rem;
+  }
+  .nav .nav-list {
+    position: fixed;
+    background: black;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: 0px;
+    text-align: left;
+    z-index: 2;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .nav .nav-list .nav__item {
+    display: block;
+    position: relative;
+    padding: 12px 12px;
+  }
+  .nav .nav-list .nav__link {
+    font-size: 2rem;
+  }
+  .nav .nav-list .nav__item:not(:last-child):hover::after {
+    width: 0;
+    cursor: pointer;
+  }
+  .nav .nav-list .nav__item--contact {
+    padding-top: 2.4rem;
+  }
+  .nav .cancel-menu {
+    display: block;
+    width: 20px;
+    cursor: pointer;
+    margin: 25px;
+    margin-bottom: 20px;
+  }
+  .overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 998;
+    display: none;
+  }
+  .overlay.show {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 585px) {
+  .hero .hero__title {
+    font-size: 4rem;
+  }
+  .hero .hero__subtitle {
+    font-size: 2.7rem;
+  }
+  .hero .arrows {
+    top: 370px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .about .about__left {
+    padding-top: 0;
+    width: 100%;
+  }
+  .about .about__right {
+    width: 100%;
+  }
+  .portfolio .project__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .portfolio .project__image {
+    width: 100%;
+  }
+  .portfolio .project__description {
+    width: 100%;
+  }
+  .portfolio .project__description .app-description {
+    margin-bottom: 2.5rem;
+  }
+  .portfolio .app-icons {
+    margin-bottom: 3rem;
+  }
+  .portfolio .col-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 /*# sourceMappingURL=style.css.map */

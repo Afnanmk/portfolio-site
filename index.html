@@ -20,7 +20,10 @@
           <div class="container">
             <nav class="nav">
               <a href="index.html" class="logo">Afnan Malik.</a>
-              <div class="nav-list">
+              <div class="nav-list" id="nav-list">
+                <div class="cancel-menu" id="cancel">
+                  <img src="Assets//icons/cancel.svg" alt="" />
+                </div>
                 <ul class="">
                   <li class="nav__item">
                     <a class="nav__link" href="#home">Home</a>
@@ -34,7 +37,7 @@
                   <li class="nav__item">
                     <a class="nav__link" href="#skills">Skills</a>
                   </li>
-                  <li class="nav__item">
+                  <li class="nav__item nav__item--contact">
                     <a
                       class="nav__link nav__link--contact"
                       href="mailto:afnanmalik80@gmail.com"
@@ -43,9 +46,13 @@
                   </li>
                 </ul>
               </div>
+              <div class="hamburger-menu" id="hamburger">
+                <img src="Assets/icons/menu.svg" alt="" />
+              </div>
             </nav>
           </div>
         </header>
+
         <div class="container">
           <div class="wrapper">
             <h1 class="hero__title">Afnan Malik</h1>
@@ -80,6 +87,7 @@
           </div>
         </div>
       </section>
+      <div class="overlay"></div>
       <!-- ******************** HERO SECTION ENDS ******************* -->
 
       <!-- ******************** ABOUT SECTION STARTS ***************** -->
@@ -116,7 +124,7 @@
       <section class="portfolio" id="projects">
         <div class="container">
           <h2 class="portfolio__title">My Projects</h2>
-          <div class="project__wrapper">
+          <div class="project__wrapper col-reverse">
             <div class="project__image">
               <img src="images/covid-react.png" alt="React Covid-19 tracker" />
             </div>
@@ -132,13 +140,19 @@
                 React, Material UI, LeafletJS, ChartJS
               </p>
               <div class="app-icons">
-                <a href="" target="_blank" title="GitHub"
+                <a
+                  href="https://github.com/Afnanmk/React-Corona-Tracker"
+                  target="_blank"
+                  title="GitHub"
                   ><img
                     src="Assets/icons/github.svg"
                     alt="GitHub Icon"
                     width="30px"
                 /></a>
-                <a href="" target="_blank" title="See Live"
+                <a
+                  href="https://suspicious-carson-5b4ebc.netlify.app/"
+                  target="_blank"
+                  title="See Live"
                   ><img
                     src="Assets/icons/live.svg"
                     alt="Live Icon"
@@ -160,13 +174,19 @@
                 React, Material UI, Firebase
               </p>
               <div class="app-icons">
-                <a href="" target="_blank" title="GitHub"
+                <a
+                  href="https://github.com/Afnanmk/react-facebook-clone"
+                  target="_blank"
+                  title="GitHub"
                   ><img
                     src="Assets/icons/github.svg"
                     alt="GitHub Icon"
                     width="30px"
                 /></a>
-                <a href="" target="_blank" title="See Live"
+                <a
+                  href=" https://hardcore-wing-0c2e5b.netlify.app/"
+                  target="_blank"
+                  title="See Live"
                   ><img
                     src="Assets/icons/live.svg"
                     alt="Live Icon"
@@ -178,7 +198,7 @@
               <img src="images/fb-clone-2.png" alt="React Covid-19 tracker" />
             </div>
           </div>
-          <div class="project__wrapper">
+          <div class="project__wrapper col-reverse">
             <div class="project__image">
               <img
                 src="images/rest-country-list-snap.PNG"
@@ -197,13 +217,19 @@
                 HTML, CSS, Javascript, API
               </p>
               <div class="app-icons">
-                <a href="" target="_blank" title="GitHub"
+                <a
+                  href=" https://github.com/Afnanmk/REST-countries-api"
+                  target="_blank"
+                  title="GitHub"
                   ><img
                     src="Assets/icons/github.svg"
                     alt="GitHub Icon"
                     width="30px"
                 /></a>
-                <a href="" target="_blank" title="See Live"
+                <a
+                  href=" https://afnanmk.github.io/REST-countries-api/"
+                  target="_blank"
+                  title="See Live"
                   ><img
                     src="Assets/icons/live.svg"
                     alt="Live Icon"
@@ -225,13 +251,19 @@
                 HTML, CSS, Javascript
               </p>
               <div class="app-icons">
-                <a href="" target="_blank" title="GitHub"
+                <a
+                  href="https://github.com/Afnanmk/interactive-pricing-component"
+                  target="_blank"
+                  title="GitHub"
                   ><img
                     src="Assets/icons/github.svg"
                     alt="GitHub Icon"
                     width="30px"
                 /></a>
-                <a href="" target="_blank" title="See Live"
+                <a
+                  href="https://afnanmk.github.io/interactive-pricing-component/"
+                  target="_blank"
+                  title="See Live"
                   ><img
                     src="Assets/icons/live.svg"
                     alt="Live Icon"
@@ -332,11 +364,16 @@
             </div>
           </div>
           <div class="copyright">
-            <p>Developed by <span>Afnan Malik</span> © 2021</p>
+            <p>
+              Developed by <a href="index.html"><span>Afnan Malik</span></a> ©
+              2021
+            </p>
           </div>
         </div>
       </footer>
       <!-- ******************** FOOTER SECTION ENDS ***************** -->
     </main>
+
+    <script src="app.js"></script>
   </body>
 </html>

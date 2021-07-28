@@ -99,6 +99,7 @@ body {
 // ******************** HEADER SECTION STARTS ********************
 .header {
   // border: 1px solid yellow;
+  background-color: #181433;
 }
 .nav {
   display: flex;
@@ -154,12 +155,18 @@ body {
     }
   }
 }
+.hamburger-menu {
+  display: none;
+}
+.cancel-menu {
+  display: none;
+}
 //  **************** HEADER SECTION ENDS ***************
 
 // ***************** HERO SECTION STARTS ***************
 .hero {
   // padding-top: 10rem;
-  min-height: 100vh;
+  min-height: 35vh;
   width: 100%;
   padding-bottom: 7rem;
   .wrapper {
@@ -167,7 +174,7 @@ body {
     width: 70%;
   }
   .hero__title {
-    font-size: 9rem;
+    font-size: 8rem;
     font-family: $montserrat-hero-title;
     -webkit-text-fill-color: transparent;
     background: -webkit-linear-gradient(312deg, #f692c6, #ffcdb1);
@@ -177,9 +184,9 @@ body {
   }
   .hero__subtitle {
     font-family: $petrona-font-subtitle;
-    font-size: 4.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    font-size: 4.3rem;
+    padding-top: 0rem;
+    padding-bottom: 2.5rem;
   }
   .hero__description {
     @include fontRegular();
@@ -201,8 +208,12 @@ body {
   .social-icons a:hover img {
     transform: translateY(-5px);
   }
+  .arrows {
+    top: 440px;
+  }
   @import "scrolldownSvg";
 }
+
 // ***************** HERO SECTION ENDS ****************
 
 // ***************** ABOUT SECTION STARTS *******************
@@ -398,7 +409,13 @@ body {
     }
     .footer-icons {
       a + a {
-        margin-left: 1.5rem;
+        margin-left: 2rem;
+      }
+      a {
+        transition: 0.4s;
+      }
+      a:hover {
+        transform: translateY(-5px);
       }
     }
   }
@@ -415,4 +432,139 @@ body {
     }
   }
 }
+.sticky-navbar {
+  position: fixed;
+  background-color: #110a3f;
+  width: 100%;
+}
 // ***************** FOOTER SECTION ENDS *******************
+
+// *************** MOBILE VERSION *****************
+
+@media only screen and (max-width: 1002px) {
+  html {
+    font-size: 55%;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  .container {
+    width: 90%;
+  }
+  .hamburger-menu {
+    width: 25px;
+    display: block;
+    cursor: pointer;
+  }
+  .hero {
+    position: relative;
+    .wrapper {
+      width: 100%;
+    }
+    .hero__title {
+      font-size: 8rem;
+    }
+  }
+
+  .nav {
+    .logo {
+      font-size: 2rem;
+    }
+    .nav-list {
+      position: fixed;
+      background: black;
+      height: 100vh;
+      width: 250px;
+      top: 0;
+      right: 0px;
+      text-align: left;
+      z-index: 2;
+      transition: 0.5s;
+      .nav__item {
+        display: block;
+        position: relative;
+        padding: 12px 12px;
+      }
+      .nav__link {
+        font-size: 2rem;
+      }
+      .nav__item:not(:last-child):hover::after {
+        width: 0;
+        cursor: pointer;
+      }
+      .nav__item--contact {
+        padding-top: 2.4rem;
+      }
+    }
+    .cancel-menu {
+      display: block;
+      width: 20px;
+      cursor: pointer;
+      margin: 25px;
+      margin-bottom: 20px;
+    }
+  }
+  .overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 998;
+    display: none;
+  }
+  .overlay.show {
+    display: block;
+  }
+}
+@media only screen and (max-width: 585px) {
+  .hero {
+    .hero__title {
+      font-size: 4rem;
+    }
+    .hero__subtitle {
+      font-size: 2.7rem;
+    }
+
+    .arrows {
+      top: 370px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .about__left {
+      padding-top: 0;
+      width: 100%;
+    }
+    .about__right {
+      width: 100%;
+    }
+  }
+  .portfolio {
+    .project__wrapper {
+      flex-direction: column;
+    }
+    .project__image {
+      width: 100%;
+    }
+    .project__description {
+      width: 100%;
+
+      .app-description {
+        margin-bottom: 2.5rem;
+      }
+    }
+    .app-icons {
+      margin-bottom: 3rem;
+    }
+    .col-reverse {
+      flex-direction: column-reverse;
+    }
+  }
+}
