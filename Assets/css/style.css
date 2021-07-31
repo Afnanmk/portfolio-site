@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 :root {
@@ -52,6 +51,8 @@ body {
 
 .header {
   background-color: #181433;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .nav {
@@ -65,7 +66,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 .nav .logo {
@@ -119,6 +120,7 @@ body {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   font-weight: 500;
+  color: white;
 }
 
 .nav .nav-list .nav__link--contact:hover {
@@ -142,7 +144,7 @@ body {
 }
 
 .hero .wrapper {
-  padding-top: 2.5rem;
+  padding-top: 3.5rem;
   width: 70%;
 }
 
@@ -312,7 +314,8 @@ body {
 .about .about__left .btn {
   background-color: #dd5e89;
   border: none;
-  padding: 1.3rem 2rem;
+  font-size: 1.4rem;
+  padding: 0.8em 1.3em;
   text-transform: uppercase;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -431,7 +434,8 @@ body {
 .portfolio .portfolio__btn {
   background-color: #dd5e89;
   border: none;
-  padding: 1.3rem 2rem;
+  font-size: 1.4rem;
+  padding: 0.8em 1.3em;
   text-transform: uppercase;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -553,7 +557,8 @@ body {
 .footer .footer__details--right .footer__btn {
   background-color: #dd5e89;
   border: none;
-  padding: 1.3rem 2rem;
+  font-size: 1.4rem;
+  padding: 0.8em 1.3em;
   text-transform: uppercase;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -604,6 +609,7 @@ body {
   position: fixed;
   background-color: #110a3f;
   width: 100%;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 1002px) {
