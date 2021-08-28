@@ -446,6 +446,134 @@ body {
   letter-spacing: 0.2rem;
 }
 
+.other-projects {
+  padding-top: 6.5rem;
+  /*General Styling*/
+  /*Card Styling*/
+  /*Card Flex Code*/
+}
+
+.other-projects .other__title {
+  font-family: "Petrona", serif;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.other-projects img {
+  max-width: 100%;
+  height: auto;
+}
+
+.other-projects small {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: #cacaca;
+}
+
+.other-projects .card {
+  background-color: #211c41;
+  padding: 2.7rem 2.2rem;
+}
+
+.other-projects .card::before {
+  content: "Website";
+  font-size: 13px;
+  background: #dd5e89;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  width: 60px;
+  margin-bottom: 1.5rem;
+}
+
+.other-projects .card__wrap--inner {
+  padding: 12px;
+}
+
+.other-projects .card__item {
+  font-family: "Petrona", serif;
+  font-size: 4rem;
+  font-size: 2.3rem;
+}
+
+.other-projects .card .name {
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+}
+
+.other-projects .card .stack {
+  padding: 2.5rem 0 1rem 0;
+  display: block;
+}
+
+.other-projects .card__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.other-projects .card__footer a + a {
+  margin-left: 1.5rem;
+}
+
+.other-projects .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.other-projects .card__wrap--outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.other-projects .card__wrap--inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .other-projects .card__wrap--inner {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .other-projects .card__wrap--inner {
+    width: 33.33%;
+  }
+}
+
+.other-projects .flexible {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .skills {
   padding-top: 12rem;
 }

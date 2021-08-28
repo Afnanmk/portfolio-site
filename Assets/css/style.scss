@@ -17,14 +17,13 @@ $petrona-font-subtitle: "Petrona", serif;
 $roboto-font: "Roboto", sans-serif;
 $space-grotesk-regular-font: "Space Grotesk", sans-serif;
 $montserrat-hero-title: "Montserrat", sans-serif;
+$col_gap: 1rem;
 
 // ********** MIXINS **********
 @mixin fontRegular {
   font-family: $space-grotesk-regular-font;
   font-size: 1.6rem;
   line-height: 2.3rem;
-  // color: #d1d1d1;
-  // color: #a7aab7;
   color: #cacaca;
 }
 @mixin fontSubtitle {
@@ -49,7 +48,6 @@ $montserrat-hero-title: "Montserrat", sans-serif;
   transition: 0.4s;
   color: white;
   border-radius: 5px;
-  // display: block;
   font-weight: 600;
   font-family: $space-grotesk-regular-font;
   letter-spacing: 0.2rem;
@@ -98,7 +96,6 @@ body {
 
 // ******************** HEADER SECTION STARTS ********************
 .header {
-  // border: 1px solid yellow;
   background-color: #181433;
   transition: all 0.3s ease-in-out 0s;
 }
@@ -171,7 +168,6 @@ body {
 
 // ***************** HERO SECTION STARTS ***************
 .hero {
-  // padding-top: 10rem;
   min-height: 35vh;
   width: 100%;
   padding-bottom: 7rem;
@@ -329,6 +325,107 @@ body {
 
 // ***************** PORTFOLIO SECTION ENDS *******************
 
+// ***************** OTHER PROJECTS SECTION STARTS *******************
+
+.other-projects {
+  padding-top: 6.5rem;
+
+  .other__title {
+    @include fontSubtitle();
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  /*General Styling*/
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  small {
+    @include fontRegular();
+  }
+
+  /*Card Styling*/
+
+  .card {
+    background-color: #211c41;
+    padding: 2.7rem 2.2rem;
+
+    &::before {
+      content: "Website";
+      font-size: 13px;
+      background: #dd5e89;
+      padding: 0.3rem 0.9rem;
+      border-radius: 50px;
+      width: 60px;
+      margin-bottom: 1.5rem;
+    }
+    &__wrap {
+      &--inner {
+        padding: 12px;
+      }
+    }
+
+    &__item {
+      @include fontSubtitle();
+      font-size: 2.3rem;
+    }
+    .name {
+      text-transform: capitalize;
+      padding-bottom: 1rem;
+    }
+    .stack {
+      padding: 2.5rem 0 1rem 0;
+      display: block;
+    }
+    &__footer {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+
+      a + a {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+
+  /*Card Flex Code*/
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__wrap {
+      &--outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      &--inner {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        @media (min-width: 700px) {
+          width: 50%;
+        }
+
+        @media (min-width: 1024px) {
+          width: 33.33%;
+        }
+      }
+    }
+  }
+
+  .flexible {
+    flex-grow: 1;
+  }
+}
+// ***************** OTHER PROJECTS SECTION ENDS *******************
+
 // ***************** SKILLS SECTION STARTS *******************
 .skills {
   @include sectionPadding();
@@ -343,7 +440,6 @@ body {
     padding: 5rem 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    // grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 50px;
     grid-row-gap: 40px;
   }
