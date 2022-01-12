@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+// *********** VARIABLES ************
+:root {
+  --bg-color: #181433;
+  --cta-color: linear-gradient(to right, #dd5e89 0%, #f7bb97 51%, #dd5e89 100%);
+}
+$heroStrongText: #dd5e89,
+  -webkit-linear-gradient(to right, #dd5e89 0%, #f7bb97 51%, #dd5e89 100%),
+  -moz-linear-gradient(to right, #dd5e89 0%, #f7bb97 51%, #dd5e89 100%),
+  linear-gradient(to right, #dd5e89 0%, #f7bb97 51%, #dd5e89 100%);
+
+$petrona-font-subtitle: "Petrona", serif;
+$roboto-font: "Roboto", sans-serif;
+$space-grotesk-regular-font: "Space Grotesk", sans-serif;
+$montserrat-hero-title: "Montserrat", sans-serif;
+$col_gap: 1rem;
+
+// ********** MIXINS **********
+@mixin fontRegular {
+  font-family: $space-grotesk-regular-font;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: #cacaca;
+}
+@mixin fontSubtitle {
+  font-family: $petrona-font-subtitle;
+  font-size: 4rem;
+}
+@mixin subtitleBar {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #dd5e89 0%, #f7bb97 100%);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+@mixin button {
+  // background-image: linear-gradient(to right, #f692c6 0%, #f7bb97 100%);
+  background-color: #dd5e89;
+  border: none;
+  font-size: 1.4rem;
+  padding: 0.8em 1.3em;
+  text-transform: uppercase;
+  transition: 0.4s;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: $space-grotesk-regular-font;
+  letter-spacing: 0.2rem;
+}
+@mixin sectionPadding {
+  padding-top: 12rem;
+}
+@mixin flex {
+  display: flex;
+}
