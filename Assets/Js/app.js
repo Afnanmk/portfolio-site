@@ -3,6 +3,7 @@ const header = document.querySelector("header")
 const sectionOne = document.querySelector(".hero")
 const BACK_TO_TOP = document.querySelector(".back_to_top")
 const navLink = document.querySelectorAll(".nav__link")
+const navItem = document.querySelectorAll(".nav__item")
 
 const sectionOneOptions = {
   threshold: 0.3,
@@ -32,5 +33,7 @@ navLink.forEach((link) => {
     const activeNav = document.querySelector(".active-nav")
     activeNav.className = activeNav.className.replace(" active-nav", "")
     this.className += " active-nav"
+
+    console.log(link.classList.contains("active-nav"))
   })
 })

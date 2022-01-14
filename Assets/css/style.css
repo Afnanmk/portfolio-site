@@ -55,8 +55,8 @@ body {
   top: 0;
   left: 0;
   background-color: transparent;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
   z-index: 99;
 }
 
@@ -91,6 +91,7 @@ body {
   position: relative;
   padding: 0 12px;
   margin-left: 12px;
+  cursor: pointer;
 }
 
 .nav .nav-list .nav__item:not(:last-child)::after {
@@ -105,7 +106,7 @@ body {
   transition: 0.4s;
 }
 
-.nav .nav-list .nav__item:not(:last-child):hover::after {
+.nav .nav-list .hover-item:hover::after {
   width: 100%;
   cursor: pointer;
 }

@@ -17,7 +17,7 @@
   top: 0;
   left: 0;
   background-color: transparent;
-  transition: all 0.4s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
   z-index: 99;
 }
 .nav {
@@ -40,6 +40,7 @@
       position: relative;
       padding: 0 12px;
       margin-left: 12px;
+      cursor: pointer;
     }
     .nav__item:not(:last-child)::after {
       content: "";
@@ -51,11 +52,14 @@
       margin-top: 0.9rem;
       transition: 0.4s;
     }
-    .nav__item:not(:last-child):hover::after {
+    // .nav__item:not(:last-child):hover::after {
+    //   width: 100%;
+    //   cursor: pointer;
+    // }
+    .hover-item:hover::after {
       width: 100%;
       cursor: pointer;
     }
-
     .nav__link {
       @include fontRegular();
     }
@@ -87,6 +91,7 @@
   margin-top: 0.9rem;
   transition: 0.4s;
 }
+
 .hamburger-menu {
   display: none;
 }
