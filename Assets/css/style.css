@@ -89,24 +89,42 @@ body {
 .nav .nav-list .nav__item {
   display: inline-block;
   position: relative;
-  padding: 0 12px;
-  margin-left: 12px;
+  margin: 0 15px;
   cursor: pointer;
 }
 
-.nav .nav-list .nav__item:not(:last-child)::after {
+.nav .nav-list .hover-link::before {
+  position: absolute;
   content: "";
   width: 0;
+  top: 100%;
+  left: 0;
   height: 2px;
   background: #dd5e89;
-  display: block;
-  margin: auto;
-  margin-top: 0.9rem;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  margin: 7px 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
-.nav .nav-list .hover-item:hover::after {
+.nav .nav-list .hover-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  top: 100%;
+  height: 3px;
+  background: #dd5e89;
+  margin: 7px 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.nav .nav-list .hover-link:hover::before {
+  width: 100%;
+  cursor: pointer;
+}
+
+.nav .nav-list .hover-link:hover::after {
   width: 100%;
   cursor: pointer;
 }
@@ -135,16 +153,30 @@ body {
   color: #181433;
 }
 
-.active-nav::after {
+.active-nav::before {
+  position: absolute;
   content: "";
   width: 100%;
+  top: 100%;
+  left: 0;
   height: 2px;
   background: #dd5e89;
-  display: block;
-  margin: auto;
-  margin-top: 0.9rem;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  margin: 7px 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.active-nav::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 100%;
+  height: 3px;
+  background: #dd5e89;
+  margin: 7px 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .hamburger-menu {

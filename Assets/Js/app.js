@@ -28,12 +28,12 @@ sectionOneOptions)
 sectionOneObserver.observe(sectionOne)
 
 // Code for changing active link on click
-navLink.forEach((link) => {
-  link.addEventListener("click", function () {
-    const activeNav = document.querySelector(".active-nav")
-    activeNav.className = activeNav.className.replace(" active-nav", "")
-    this.className += " active-nav"
+// navLink.forEach((link) => {
+//   link.addEventListener("click", function () {
+//     const activeNav = document.querySelector(".active-nav")
+//     activeNav.className = activeNav.className.replace(" active-nav", "")
+//     this.className += " active-nav"
 
-    console.log(link.classList.contains("active-nav"))
-  })
-})
+//     console.log(link.classList.contains("active-nav"))
+//   })
+// })
