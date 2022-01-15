@@ -93,42 +93,6 @@ body {
   cursor: pointer;
 }
 
-.nav .nav-list .hover-link::before {
-  position: absolute;
-  content: "";
-  width: 0;
-  top: 100%;
-  left: 0;
-  height: 2px;
-  background: #dd5e89;
-  margin: 7px 0;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.nav .nav-list .hover-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  right: 0;
-  top: 100%;
-  height: 3px;
-  background: #dd5e89;
-  margin: 7px 0;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.nav .nav-list .hover-link:hover::before {
-  width: 100%;
-  cursor: pointer;
-}
-
-.nav .nav-list .hover-link:hover::after {
-  width: 100%;
-  cursor: pointer;
-}
-
 .nav .nav-list .nav__link {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.6rem;
@@ -137,7 +101,6 @@ body {
 }
 
 .nav .nav-list .nav__link--contact {
-  background-color: #f7bb97;
   background-color: #dd5e89;
   padding: 1rem 1.7rem 1.2rem 1.7rem;
   border-radius: 5px;
@@ -153,30 +116,30 @@ body {
   color: #181433;
 }
 
-.active-nav::before {
-  position: absolute;
+.hover-link::after {
   content: "";
-  width: 100%;
-  top: 100%;
-  left: 0;
+  width: 0;
   height: 2px;
   background: #dd5e89;
-  margin: 7px 0;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  display: block;
+  margin: auto;
+  margin-top: 0.9rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.hover-link:hover::after {
+  width: 100%;
 }
 
 .active-nav::after {
   content: "";
-  position: absolute;
   width: 100%;
-  right: 0;
-  top: 100%;
-  height: 3px;
+  height: 2px;
   background: #dd5e89;
-  margin: 7px 0;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  display: block;
+  margin: auto;
+  margin-top: 0.9rem;
 }
 
 .hamburger-menu {
@@ -904,7 +867,7 @@ body {
   .nav .nav-list .nav__item {
     display: block;
     position: relative;
-    padding: 12px 12px;
+    padding: 25px 12px;
   }
   .nav .nav-list .nav__link {
     font-size: 2rem;
@@ -935,6 +898,9 @@ body {
   }
   .overlay.show {
     display: block;
+  }
+  .hover-link::after {
+    content: none;
   }
 }
 
