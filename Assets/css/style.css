@@ -424,6 +424,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 5rem;
+  position: relative;
 }
 
 .portfolio .project__wrapper + .project__wrapper {
@@ -504,6 +505,16 @@ body {
   letter-spacing: 0.2rem;
 }
 
+.app-tag {
+  background-color: #dd5e89;
+  font-size: 13px;
+  border-radius: 50px;
+  padding: 0.3rem 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  display: inline-block;
+}
+
 .other-projects {
   padding-top: 6.5rem;
   /*General Styling*/
@@ -533,6 +544,7 @@ body {
 .other-projects .card {
   background-color: #211c41;
   padding: 2.7rem 2.2rem;
+  border-radius: 6px;
 }
 
 .other-projects .card::before {
@@ -553,6 +565,11 @@ body {
   font-family: "Petrona", serif;
   font-size: 4rem;
   font-size: 2.3rem;
+}
+
+.other-projects .card .card__image {
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
 }
 
 .other-projects .card .name {

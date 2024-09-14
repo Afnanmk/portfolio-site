@@ -15,11 +15,6 @@
     <link rel="icon" href="images/title-logo-3.png" type="image/x-icon" />
   </head>
   <body>
-    
-
-   
-
-   
     <main>
       <!-- ********************* HEADER SECTION STARTS ******************** -->
       <header class="header">
@@ -67,8 +62,6 @@
         <div class="shape shape-3"></div>
         <div class="shape shape-4"></div>
         <div class="shape shape-5"></div>
-
-
         <div class="container">
           <div class="wrapper">
             <h1 class="hero__title">Afnan Malik</h1>
@@ -123,12 +116,11 @@
               <p style="margin-top: 1rem">
                 I am dedicated and highly motivated to create user friendly,
                 aesthetically pleasing and functional web products wheather its
-                website or web app for clients and companies. Feel free to
-                download my resume.
-              </p>
+                website or web app for clients and companies.  </p>
+                <p>Feel free to download my resume.</p> 
+             
               <a
-                href="https://drive.google.com/file/d/1A3fVzFtU-eQ8PSz0VtMAlMfSJtQr8Gw6/view?usp=sharing"
-                target="_blank"
+                href="resume.pdf.pdf" download target="_blank"
                 ><button class="btn resume-btn">Resume</button></a
               >
             </div>
@@ -149,11 +141,12 @@
       <section class="portfolio page-section" id="projects">
         <div class="container">
           <h2 class="portfolio__title">My Projects</h2>
-          <div class="project__wrapper col-reverse">
+          <div class="project__wrapper  col-reverse">
             <div class="project__image">
               <img src="images/covid-react.png" alt="React Covid-19 tracker" />
             </div>
-            <div class="project__description">
+            <div class="project__description react-tag">
+              <span class="app-tag">React App</span>
               <h4 class="app-title">Covid-19 Tracker</h4>
               <p class="app-description app-description--container">
                 Covid-19 tracker web app that provides data of total infected,
@@ -185,20 +178,19 @@
             </div>
           </div>
           <div class="project__wrapper">
-            <div class="project__description">
-              <h4 class="app-title">Facebook Clone</h4>
+            <div class="project__description react-tag">
+              <span class="app-tag">React App</span>
+              <h4 class="app-title">Keep Notes</h4>
               <p class="app-description app-description--container">
-                A Facebook clone web app with login system via google that is
-                authenticated by Firebase's fireAuth.Also status can be posted
-                with image.Firebases's database is used for data storage.
+                A note taking web app inspired by Google Keep where notes can be created. It also comes with edit,delete,search features and provided with a color switcher to switch to dark mode.
               </p>
               <h4 class="app-title tech-stack">Tech Stack:</h4>
               <p class="app-description app-description--container">
-                React, Material UI, Firebase
+                ReactJS, Firebase
               </p>
               <div class="app-icons">
                 <a
-                  href="https://github.com/Afnanmk/react-facebook-clone"
+                  href="https://github.com/Afnanmk/react-google-keep-clone"
                   target="_blank"
                   title="Source Code"
                   ><img
@@ -207,7 +199,7 @@
                     width="30"
                 /></a>
                 <a
-                  href=" https://hardcore-wing-0c2e5b.netlify.app/"
+                  href="https://eager-golick-4cec45.netlify.app/"
                   target="_blank"
                   title="See Live"
                   ><img src="Assets/icons/live.svg" alt="Live Icon" width="45"
@@ -215,23 +207,21 @@
               </div>
             </div>
             <div class="project__image">
-              <img src="images/fb-clone-2.png" alt="Facebook Clone" />
+              <img src="images/keep-note-1.webp" alt="Keep Notes" />
             </div>
           </div>
-          <div class="project__wrapper col-reverse">
+          <div class="project__wrapper js-tag col-reverse">
             <div class="project__image">
               <img
-                src="images/rest-country-list-snap.PNG"
+                src="images/weather-js-1.png"
                 alt="REST API country list"
               />
             </div>
             <div class="project__description">
-              <h4 class="app-title">Rest API Country List</h4>
+              <span class="app-tag">JS App</span>
+              <h4 class="app-title">Weather App</h4>
               <p class="app-description app-description--container">
-                A country list web app where little details of each country such
-                as population,languages,currency etc are provided with a color
-                switcher to switch themes.For information,REST Countries API is
-                used. UI designed by FrontendMentor.
+                A weather app where users can search for weather sunset/sunrise time by country. It also comes with the feature of toggle temperature unit.
               </p>
               <h4 class="app-title tech-stack">Tech Stack:</h4>
               <p class="app-description app-description--container">
@@ -239,7 +229,7 @@
               </p>
               <div class="app-icons">
                 <a
-                  href=" https://github.com/Afnanmk/REST-countries-api"
+                  href="https://github.com/Afnanmk/weather-js"
                   target="_blank"
                   title="Source Code"
                   ><img
@@ -248,7 +238,7 @@
                     width="30"
                 /></a>
                 <a
-                  href=" https://afnanmk.github.io/REST-countries-api/"
+                  href="https://thirsty-kare-a8ad30.netlify.app/"
                   target="_blank"
                   title="See Live"
                   ><img src="Assets/icons/live.svg" alt="Live Icon" width="45"
@@ -256,8 +246,9 @@
               </div>
             </div>
           </div>
-          <div class="project__wrapper">
+          <div class="project__wrapper js-tag">
             <div class="project__description">
+              <span class="app-tag">JS App</span>
               <h4 class="app-title">Interactive Pricing</h4>
               <p class="app-description app-description--container">
                 A responsive pricing component where users are able to use the
@@ -300,15 +291,18 @@
         <div class="container">
         <h2 class="other__title">Other Noteworthy Projects</h2>
           <div class="card__wrap--outer">
+           
             <div class="card__wrap--inner">
+             
               <div class="card">
+                <img src="Images/delivery-app-1.webp" alt="" class="card__image">
                 <div class="card__item name">
-                  <h4>Counselor Website</h4>
+                  <h4>App Landing Page</h4>
                 </div>
 
                 <div class="card__item flexible">
                   <small
-                    >A responsive website built with Bootstrap and designed by colorlib.</small
+                    >A responsive landing page website built with Bootstrap and designed by Uldeck.</small
                   >
                 </div>
                 <div class="card__item stack">
@@ -316,7 +310,7 @@
                 </div>
                 <div class="card__footer">
                   <a
-                    href="https://github.com/Afnanmk/counselling-website"
+                    href="https://github.com/Afnanmk/delivery-app-landing-page"
                     target="_blank"
                     title="Source Code"
                     ><img
@@ -325,7 +319,7 @@
                       width="30"
                   /></a>
                   <a
-                    href="https://afnanmk.github.io/counselling-website/"
+                    href="https://afnanmk.github.io/delivery-app-landing-page/"
                     target="_blank"
                     title="See Live"
                     ><img
@@ -339,9 +333,9 @@
 
             <div class="card__wrap--inner">
               <div class="card">
-                
+                <img src="Images/interior-design.webp" alt="" class="card__image">
                 <div class="card__item  name">
-                  <h4>Laundry Landing page</h4>
+                  <h4>Interior</h4>
                 </div>
 
                 <div class="card__item flexible">
@@ -354,7 +348,7 @@
                 </div>
                 <div class="card__footer">
                   <a
-                    href="https://github.com/Afnanmk/laundry-website"
+                    href="https://github.com/Afnanmk/interior-design-website"
                     target="_blank"
                     title="Source Code"
                     ><img
@@ -363,7 +357,7 @@
                       width="30"
                   /></a>
                   <a
-                    href="https://afnanmk.github.io/laundry-website/"
+                    href="https://optimistic-tesla-0efa7e.netlify.app/"
                     target="_blank"
                     title="See Live"
                     ><img
@@ -377,7 +371,7 @@
 
             <div class="card__wrap--inner">
               <div class="card">
-               
+                <img src="Images/manage-1.png" alt="" class="card__image">
                 <div class="card__item name">
                   <h4>Manage landing page</h4>
                 </div>
@@ -441,13 +435,6 @@
               <p>SCSS</p>
             </div>
             <div class="skill">
-              <img
-                src="Assets/icons/icons8-material-ui.svg"
-                alt="Material Ui"
-              />
-              <p>Material UI</p>
-            </div>
-            <div class="skill">
               <img src="Assets/icons/icons8-git.svg" alt="git" />
               <p>Git</p>
             </div>
@@ -464,7 +451,7 @@
                 src="Assets/icons/responsive-design(1).svg"
                 alt="Responsive"
               />
-              <p>Responsive</p>
+              <p>Responsive Web Design</p>
             </div>
             <!-- <div class="skill">
               <img src="Assets/icons/api.svg" alt="Api" />
